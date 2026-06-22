@@ -1,2 +1,52 @@
-/.vscode
-/__pycache__
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment & secrets
+.env
+.env.*
+
+# Model checkpoints & training artifacts
+trained_models/*
+!trained_models/.gitkeep
+training_logs/*
+!training_logs/.gitkeep
+outputs/
+11.9begin/
+
+# Datasets (obtain locally or via release; see README)
+dnn_datasets/*
+!dnn_datasets/.gitkeep
+rl_datasets/*
+!rl_datasets/.gitkeep
+
+# Generated plots & logs
+*.pdf
+*.npy
+*.log
