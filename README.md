@@ -1,9 +1,17 @@
+<<<<<<< HEAD
+=======
+# Detecting-State-of-Charge
+>>>>>>> e2de4c4a7bf1015171850e0a6936029aadf2b9f4
 
 This repository contains the implementation of the State of Charge (SoC) false reporting attacks via reinforcement learning, and the corresponding deep neural network (DNN) detection models.
 
 ## Repository Structure
 
 ### Training Scripts
+<<<<<<< HEAD
+=======
+
+>>>>>>> e2de4c4a7bf1015171850e0a6936029aadf2b9f4
 - `train_dnn.py`: Code for training the detection model. This script includes comprehensive complexity analysis (FLOPs, MACs, parameters), latency testing, and detailed performance metric tracking.
 - `train_rl.py`: Code for training the RL agent to generate intelligent attacks.
 - `options_origin.py`: Description of arguments for training the RL agent.
@@ -11,7 +19,13 @@ This repository contains the implementation of the State of Charge (SoC) false r
 - `soc_dataset.py`: PyTorch dataset class for defining how to retrieve samples from the dataset.
 
 ### Evaluation and Metrics
+<<<<<<< HEAD
 Outputs of a run will be saved to timestamped directories (e.g., `11.9begin/YYYY-MM-DD_HH-MM/`), including:
+=======
+
+Outputs of a run will be saved to timestamped directories (e.g., `11.9begin/YYYY-MM-DD_HH-MM/`), including:
+
+>>>>>>> e2de4c4a7bf1015171850e0a6936029aadf2b9f4
 - Detailed metrics in `all_metrics.txt` (model configuration, computational overhead, inference latency).
 - Training and validation loss/accuracy plots (`train_loss.pdf`, `accuracy.pdf`).
 - Best model checkpoints.
@@ -27,9 +41,17 @@ python train_dnn.py --lr_model LEARNING_RATE --lr_decay LEARNING_RATE_DECAY --n_
 ```
 
 You may also add:
+<<<<<<< HEAD
 ```bash
 --train_dataset TRAIN_PATH --val_dataset VAL_PATH --test_dataset TEST_PATH
 ```
+=======
+
+```bash
+--train_dataset TRAIN_PATH --val_dataset VAL_PATH --test_dataset TEST_PATH
+```
+
+>>>>>>> e2de4c4a7bf1015171850e0a6936029aadf2b9f4
 to specify the training/val/test dataset.
 
 See `options1.py` for other arguments that can be specified. Outputs of a run will be saved to the specified `save_dir` or timestamped directory.
@@ -43,6 +65,10 @@ python train_rl.py --lr_model LEARNING_RATE --lr_decay LEARNING_RATE_DECAY --n_e
 ```
 
 To train an RL agent with gamma regularization, add the arguments:
+<<<<<<< HEAD
+=======
+
+>>>>>>> e2de4c4a7bf1015171850e0a6936029aadf2b9f4
 ```bash
 --regularize --gamma GAMMA
 ```
@@ -52,6 +78,10 @@ See `options_origin.py` for other arguments that can be specified. Outputs of a 
 ## Evaluation
 
 ### Evaluating the Detection Model
+<<<<<<< HEAD
+=======
+
+>>>>>>> e2de4c4a7bf1015171850e0a6936029aadf2b9f4
 To evaluate a trained detection model on the test dataset, run the following and add the path to the model parameters:
 
 ```bash
@@ -59,22 +89,42 @@ python train_dnn.py --eval_only --load_path PATH_TO_TRAINED_MODEL
 ```
 
 ### Evaluating the RL Agent
+<<<<<<< HEAD
+=======
+
+>>>>>>> e2de4c4a7bf1015171850e0a6936029aadf2b9f4
 To test a trained RL agent in the charging simulation, run the following with the path to the agent's parameters:
 
 ```bash
 python train_rl.py --eval_only --load_path PATH_TO_TRAINED_AGENT
 ```
+<<<<<<< HEAD
 Add the arguments `--regularize --gamma GAMMA` if the agent was trained with gamma regularization.
 
 ### Testing Synthetic Attacks
+=======
+
+Add the arguments `--regularize --gamma GAMMA` if the agent was trained with gamma regularization.
+
+### Testing Synthetic Attacks
+
+>>>>>>> e2de4c4a7bf1015171850e0a6936029aadf2b9f4
 To test a synthetic attack strategy:
 
 ```bash
 python train_rl.py --eval_only --attack_model attackX
 ```
+<<<<<<< HEAD
 Where `X` represents the synthetic attack type and can be any of `1-4`.
 
 ### Testing Detection Accuracy on Attacks
+=======
+
+Where `X` represents the synthetic attack type and can be any of `1-4`.
+
+### Testing Detection Accuracy on Attacks
+
+>>>>>>> e2de4c4a7bf1015171850e0a6936029aadf2b9f4
 To test the detection accuracy of a DNN model on RL agent attacks:
 
 ```bash
@@ -106,6 +156,10 @@ python train_rl.py --eval_detect --load_path PATH_TO_TRAINED_AGENT --attack_mode
 The training/validation/testing datasets for the RL agent can be found in the `rl_datasets` directory.
 
 The datasets for the detection models can be found in the `dnn_datasets` directory:
+<<<<<<< HEAD
+=======
+
+>>>>>>> e2de4c4a7bf1015171850e0a6936029aadf2b9f4
 - Files with the name format `dataset_X_syn.py` correspond to datasets with both synthetic and intelligent attacks.
 - Files with the name format `dataset_X.pt` correspond to datasets with intelligent attacks only.
 
